@@ -39,6 +39,19 @@ const IndexScreen =({navigation}) => {
     );
 };
 
+IndexScreen.navigationOptions = ({navigation}) => {
+    return {
+        headerRight:
+        <TouchableOpacity onPress={()=> {
+            navigation.navigate('Create')
+        }}>
+         <Feather
+         name="plus"
+         size={30}></Feather>
+         </TouchableOpacity>
+    };
+};
+
 const styles = StyleSheet.create({
 
     row:{
